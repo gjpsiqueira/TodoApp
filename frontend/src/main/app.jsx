@@ -1,12 +1,13 @@
 import React from 'react'
-import Todo from '../todo/todo'
-import About from '../about/about'
 import Menu from '../template/menu'
+import Routes from './routes'
+import { HashRouter } from 'react-router-dom'
 
 export default props => (
-    <div className="container">
-        <Menu />
-        <Todo />
-        <About />
-    </div>
+    <HashRouter>
+        <div className="container">
+            <Menu />
+            <Routes />
+        </div>
+    </HashRouter>
 )
