@@ -19,6 +19,9 @@ export default class Todo extends React.Component {
         this.handleMarkAsPending = this.handleMarkAsPending.bind(this)
     }
 
+    componentWillMount() {
+        this.refresh()
+    }
     refresh() {
         axios.get(`${URL}?sort=-createdAt`)
             .then(resp => this.setState({...this.state, description: '', list: resp.data}))
