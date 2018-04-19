@@ -71,12 +71,7 @@ export default class Todo extends React.Component {
 
             <div>
                 <PageHeader name="Tarefas" small="Cadastro"/>
-                <TodoForm  
-                    description={this.state.description}
-                    handleAdd={this.handleAdd} 
-                    handleChange={this.handleChange}
-                    handleSearch={this.handleSearch} 
-                    handleClear={this.handleClear} />
+                <TodoForm  />
                 <TodoList 
                     list={this.state.list}
                     handleMarkAsDone={this.handleMarkAsDone}
